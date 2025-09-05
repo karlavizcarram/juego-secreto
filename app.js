@@ -14,8 +14,6 @@ function asignarTextoElemento(elemento, texto){
 function intentoUsuario() {
     //let numeroUsuario = document.querySelector('input');
     let numeroUsuario = parseInt(document.getElementById('numeroUsuario').value);
-    console.log(numeroSecreto);
-    console.log(contadorIntentos);
 
     if(numeroSecreto === numeroUsuario){
         asignarTextoElemento('p',`Acertaste el número en ${contadorIntentos} ${(contadorIntentos === 1) ? 'vez' : 'veces'}`);
@@ -38,8 +36,8 @@ function limpiarCaja(){
 
 function generadorSecreto(){
     let numeroGenerado =  Math.floor(Math.random()*numeroMaximo)+1;
-    console.log(numeroGenerado);
-    console.log(listaNumeroSorteado);
+    console.log('El número generado es: +numeroGenerado');
+    console.log('El número total de números generados son: +listaNumeroSorteado');
     // Sí ya sorteamos todos los números
     if (listaNumeroSorteado.length == numeroMaximo){
         asignarTextoElemento('p', 'Ya se sortearon todos los números posibles');
